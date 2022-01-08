@@ -1,2 +1,2 @@
-task portfolio#1 - https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio-part1.md
-recomendations for task - https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio-part1-hints.md
+*task portfolio#1 - https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio-part1.md
+*recomendations for task - https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio-part1-hints.md
