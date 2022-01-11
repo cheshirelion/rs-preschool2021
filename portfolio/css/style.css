@@ -2,18 +2,24 @@
   --color-gold: #bdae82;
   --color-black: #000;
   --color-white: #ffffff;
-  --font1: 60px;
-  --font2: 40px;
 }
 
-* {
+html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
 .body-container {
-  color: var(--color-white);
   font-family: Inter, sans-serif;
-  background-color: var(--color-black);
+  font-style: normal;
+  font-weight: normal;
+  color: var(--color-white);
 }
 
 @font-face {
@@ -27,14 +33,23 @@
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.header {
+  background-color: var(--color-black);
+}
+
 .header-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
   height: 90px;
-  background: url('./assets/img/header-bg.jpg');
+  padding: 20px 0;
+  background: url("./assets/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
 }
@@ -44,17 +59,14 @@
   font-weight: 700;
 }
 
-.section-title-hero {
-
+.logo-container {
+  width: 50px;
+  height: 50px;
 }
 
-.logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 0px;
-  color: var(--color-white);
-  /* background-color: #ffffff; */
-  background-image: url('./assets/img/logo.png);
+ .logo {
+  color: var(--color-black);
+  background-image: url("../assets/svg/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: 0.3s; 
@@ -66,24 +78,55 @@
 }
 
 .nav {
-
+  margin-left: auto;
 }
 
 .nav-list {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-item {
+  margin-right: 30px;
+  list-style-type: none;
+}
 
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  /* font-size: 20px;
+  line-height: 50px; */
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .switch-lng {
-  width: 70px;
+  /* width: 70px; */
   height: 50px;
+  margin: 0;
 }
 
-.hero-container {
+.switch-nav-item {
+  margin-right: 8px;
+  list-style-type: none;
+}
+
+.switch-nav-item:last-child {
+  margin-right: 0;
+}
+
+.switch-eng {
+  color: var(--color-gold);
+}
+
+.main {
+  background-color: var(--color-black);
+}
+
+/* .hero-container {
   background-image: url('./assets/img/header-bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
-}
+} */
