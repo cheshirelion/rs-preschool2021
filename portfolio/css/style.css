@@ -109,6 +109,13 @@ html {
   line-height: 50px; */
   color: var(--color-white);
   text-decoration: none;
+  transition: .3s;
+}
+
+.nav-link:hover, 
+.nav-link:focus,
+.nav-link:active {
+  color: var(--color-gold);
 }
 
 .switch-lng {
@@ -124,10 +131,6 @@ html {
 
 .switch-nav-item:last-child {
   margin-right: 0;
-}
-
-.switch-eng {
-  color: var(--color-gold);
 }
 
 .main {
