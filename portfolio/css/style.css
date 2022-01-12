@@ -182,7 +182,7 @@ h1 {
   text-shadow: 0px 4px 4px #000;
 }
 
-.btn1 {
+.btn-gold {
   width: 220px;
   height: 55px;
   border: 0;
@@ -192,4 +192,13 @@ h1 {
   line-height: 40px;
 }
 
+.btn-gold:hover,
+.btn-gold:focus,
+.btn-gold:active {
+  background-color: transparent;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  box-sizing: border-box;
+  border-radius: 0px;
+}
 /* Hero styles end */
