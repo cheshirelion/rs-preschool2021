@@ -64,7 +64,7 @@ html {
   font-size: 65px;
   font-weight: 700;
   line-height: 120px;
-  color: var(--color-gold);
+  color: var(--color-white);
   letter-spacing: 1px;
 }
 
@@ -154,19 +154,18 @@ html {
 }
 
 /* Hero styles start */
+.section-hero {
+  height: 820px;
+  background-image: url('../assets/img/header-bg.jpg');
+  background-position: center -90px;
+  background-repeat: no-repeat;
+}
 
 .container-hero {
   margin-left: 60px;
   width: 500px;
   height: 330px;
   padding-top: 158px;
-}
-
-.section-hero {
-  height: 100vh;
-  background-image: url('../assets/img/header-bg.jpg');
-  background-position: center -90px;
-  background-repeat: no-repeat;
 }
 
 .text-hero {
@@ -205,10 +204,9 @@ html {
 /* Hero styles end */
 
 /* Skills styles start */
-
 .section-skills {
-  border: 1px solid red;
   height: 482px;
+  padding-top: 80px;
 }
 
 .container-title {
@@ -252,12 +250,60 @@ html {
   margin-left: 20px;
 }
 
-/* .container-skills {
+.container-skills {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-} */
+  margin-top: 40px;
+}
 
-/* Skills styles end */
+.skills-item {
+  width: 320px;
+  height: 240px;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.skills-item:nth-child(1) {
+  background-image: url('../assets/svg/camera.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(2) {
+  background-image: url('../assets/svg/video.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(3) {
+  background-image: url('../assets/svg/retouch.svg');
+  background-size: 62px 50px;
+}
+
+.skills-item:nth-child(4) {
+  background-image: url('../assets/svg/mic.svg');
+  background-size: 62px 50px;
+}
+
+.skills-items-title {
+  margin-top: 100px;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+
+
+}
+
+.skills-items-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+}
