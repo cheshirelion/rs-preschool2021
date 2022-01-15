@@ -414,3 +414,35 @@ html {
 /* to do: btn hover*/
 
 /* Video styles end */
+
+
+/* Price styles */
+
+.section-price {
+  padding-top: 80px;
+  height: 845px;
+}
+
+.price-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.price-card {
+  width: 450px;
+  height: 505px;
+  border: 3px solid var(--color-gold);
+}
+
+.price-text {
+
+}
+
+.price-span {
+  display: block;
+}
+
+/* Price styles end */
