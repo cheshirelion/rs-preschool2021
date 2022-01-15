@@ -43,6 +43,8 @@ html {
   padding-top: 20px;
 }
 
+/* Header styles */
+
 .header {
   height: 90px;
   background: url("../assets/img/header-bg.jpg");
@@ -139,9 +141,7 @@ html {
   margin-right: 0;
 }
 
-/* .main {
-  background-color: var(--color-black);
-} */
+/* Header styles end */
 
 .main-container {
   display: flex;
@@ -153,7 +153,9 @@ html {
   max-width: auto;
 }
 
-/* Hero styles start */
+
+/* Hero styles */
+
 .section-hero {
   height: 820px;
   background-image: url('../assets/img/header-bg.jpg');
@@ -201,9 +203,12 @@ html {
   box-sizing: border-box;
   border-radius: 0px;
 }
+
 /* Hero styles end */
 
-/* Skills styles start */
+
+/* Skills styles */
+
 .section-skills {
   height: 482px;
   padding-top: 80px;
@@ -211,7 +216,6 @@ html {
 
 .container-title {
   display: flex;
-  /* position: relative; */
   justify-content: center;
   align-items: center;
   width: 50%;
@@ -292,18 +296,121 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
-  letter-spacing: 0em;
+  letter-spacing: 0.06em;
   text-align: center;
 
 
 }
 
 .skills-items-text {
+  /* max-width: 280px; */
   margin-top: 20px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  letter-spacing: 0em;
+  letter-spacing: 0.02em;
   text-align: center;
 }
+
+/* Skills styles end */
+
+
+/* Portfolio styles */
+
+.section-portfolio {
+  height: 1500px;
+  padding-top: 80px;
+}
+
+.portfolio-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 40px;
+}
+
+.portfolio-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolio-card1 {
+  background-image: url('../assets/img/portfolio-img1.jpg');
+  width: 450px;
+  height: 560px;
+}
+
+.portfolio-card2 {
+  background-image: url('../assets/img/portfolio-img2.jpg');
+  width: 450px;
+  height: 560px;
+}
+
+.portfolio-card3 {
+  background-image: url('../assets/img/portfolio-img3.jpg');
+  width: 450px;
+  height: 560px;
+}
+
+.portfolio-card4 {
+  background-image: url('../assets/img/portfolio-img4.jpg');
+  width: 450px;
+  height: 560px;
+}
+
+.portfolio-card5 {
+  background-image: url('../assets/img/portfolio-img5.jpg');
+  width: 450px;
+  height: 560px;
+}
+
+.portfolio-card6 {
+  background-image: url('../assets/img/portfolio-img6.jpg');
+  width: 450px;
+  height: 560px;
+}
+
+/* Portfolio styles end */
+
+
+/* Video styles*/
+
+.section-video {
+  height: 945px;
+  padding-top: 80px;
+}
+
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 1400px;
+  height: 705px;
+  background-image: url('../assets/img/video-bg.jpg');
+}
+
+.video-btn {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background-image: url('../assets/svg/video-btn.svg');
+  background-color: transparent;
+  width: 130px;
+  height: 130px;
+  border: none;
+}
+
+/* to do: btn hover*/
+
+/* Video styles end */
