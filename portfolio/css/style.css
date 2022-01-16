@@ -43,6 +43,48 @@ html {
   padding-top: 20px;
 }
 
+.btn-gold {
+  width: 220px;
+  height: 55px;
+  border: 0;
+  background-color: var(--color-gold);
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.btn-gold:hover,
+.btn-gold:focus,
+.btn-gold:active {
+  background-color: transparent;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  box-sizing: border-box;
+  border-radius: 0px;
+}
+
+.btn-black {
+  width: 220px;
+  height: 55px;
+  background-color: transparent;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  border-radius: 0px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.btn-black:hover,
+.btn-black:focus,
+.btn-black:active {
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
 /* Header styles */
 
 .header {
@@ -184,26 +226,6 @@ html {
   text-shadow: 0px 4px 4px #000;
 }
 
-.btn-gold {
-  width: 220px;
-  height: 55px;
-  border: 0;
-  background-color: var(--color-gold);
-  cursor: pointer;
-  font-size: 20px;
-  line-height: 40px;
-}
-
-.btn-gold:hover,
-.btn-gold:focus,
-.btn-gold:active {
-  background-color: transparent;
-  color: var(--color-gold);
-  border: 2px solid var(--color-gold);
-  box-sizing: border-box;
-  border-radius: 0px;
-}
-
 /* Hero styles end */
 
 
@@ -234,7 +256,7 @@ html {
   text-align: center;
   font-weight: 700;
   font-style: normal;
-  font-size: 40px;
+  font-size: 45px;
   line-height: 80px;
   letter-spacing: 1px;
 }
@@ -302,7 +324,7 @@ html {
 
 }
 
-.skills-items-text {
+.items-text {
   /* max-width: 280px; */
   margin-top: 20px;
   font-size: 18px;
@@ -429,20 +451,137 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px;
+  margin-top: 40px;
 }
 
 .price-card {
+  padding-top: 20px;
   width: 450px;
   height: 505px;
-  border: 3px solid var(--color-gold);
+  border: 2px solid var(--color-gold);
 }
 
-.price-text {
+.price-title {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: center;
+  color: var(--color-white);
+  letter-spacing: 1px;
+}
 
+.price {
+  margin-top: 23px;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 48px;
+  text-align: center;
+  color: var(--color-gold);
 }
 
 .price-span {
   display: block;
 }
 
+.price-btn {
+  margin: 38px 113px 38px 113px;
+}
+
 /* Price styles end */
+
+
+/* Contacts styles */
+.section-contacts {
+  height: 700px;
+  background: url('../assets/img/contacts-bg.jpg');
+  background-size: auto 700px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container-contacts {
+  margin: 60px 0 0 auto;
+  width: 450px;
+  height: 445px;
+}
+
+.contacts-title {
+  margin-top: 0px;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  color: var(--color-gold);
+}
+
+.contacts-form {
+  padding-top: 6px;
+}
+
+.contacts-input,
+.contacts-textarea {
+  padding: 5px 20px;
+  width: 450px;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+
+.contacts-input {
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.contacts-textarea {
+  padding-top: 12px;
+  margin-bottom: 26px;
+  height: 100px;
+  resize: none;
+}
+
+.contacts-input::placeholder,
+.contacts-textarea::placeholder {
+  font-family: inherit;
+  color: var(--color-gold);
+  font-size: 20px;
+}
+
+/* Contacts styles end*/
+
+.footer {
+  height: 150px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  color: var(--color-white);
+}
+
+.footer-link {
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* .github-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+} */

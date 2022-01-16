@@ -56,22 +56,22 @@
                             <div class="container-skills">
                                 <div class="skills-item">
                                     <h3 class="skills-items-title">Digital photography</h3>
-                                    <p class="skills-items-text">High-quality photos in the studio<br> and on the nature</p>
+                                    <p class="items-text">High-quality photos in the studio<br> and on the nature</p>
                                 </div>
 
                                 <div class="skills-item">
                                     <h3 class="skills-items-title">Video shooting</h3>
-                                    <p class="skills-items-text">Capture your moments so that<br> they always stay with you </p>
+                                    <p class="items-text">Capture your moments so that<br> they always stay with you </p>
                                 </div>
 
                                 <div class="skills-item">
                                     <h3 class="skills-items-title">Retouch</h3>
-                                    <p class="skills-items-text">I strive to make photography<br> surpass reality</p>
+                                    <p class="items-text">I strive to make photography<br> surpass reality</p>
                                 </div>
 
                                 <div class="skills-item">
                                     <h3 class="skills-items-title">Audio</h3>
-                                    <p class="skills-items-text">Professional sounds recording<br> for video, advertising, portfolio</p>
+                                    <p class="items-text">Professional sounds recording<br> for video, advertising, portfolio</p>
                                 </div>
                             </div>
                     </div>
@@ -82,11 +82,10 @@
                     <h2 class="section-title">Portfolio</h2>
 
                     <div class="portfolio-btns">
-                        <!-- to do: style btn-black -->
-                        <button class="btn-gold">Winter</button>
-                        <button class="btn-gold">Spring</button>
-                        <button class="btn-gold">Summer</button>
-                        <button class="btn-gold">Autumn</button>
+                        <button class="btn-black">Winter</button>
+                        <button class="btn-black">Spring</button>
+                        <button class="btn-black">Summer</button>
+                        <button class="btn-black">Autumn</button>
                     </div>
 
                     <div class="portfolio-cards">
@@ -119,53 +118,73 @@
                         <div class="price-card">
                             <h3 class="price-title">Standard</h3>
                             <div class="price">500 $</div>
-                            <div class="price-text">
+                            <div class="items-text">
                                 <span class="price-span">One location</span>
                                 <span class="price-span">120 photos in color</span>
                                 <span class="price-span">12 photos in retouch</span>
                                 <span class="price-span">Readiness 2-3 weeks</span>
                                 <span class="price-span">Make up, visage</span>
                             </div>
-                            <button class="btn-gold">Order shooting</button>
+                            <button class="btn-gold price-btn">Order shooting</button>
                         </div>
 
                         <div class="price-card">
                             <h3 class="price-title">Premium</h3>
                             <div class="price">700 $</div>
-                            <div class="price-text">
+                            <div class="items-text">
                                 <span class="price-span">One or two locations</span>
                                 <span class="price-span">200 photos in color</span>
                                 <span class="price-span">20 photos in retouch</span>
                                 <span class="price-span">Readiness 1-2 weeks</span>
                                 <span class="price-span">Make up, visage</span>
                             </div>
-                            <button class="btn-gold">Order shooting</button>
+                            <button class="btn-gold price-btn">Order shooting</button>
                         </div>
 
                         <div class="price-card">
                             <h3 class="price-title">Gold</h3>
                             <div class="price">1000 $</div>
-                            <div class="price-text">
+                            <div class="items-text">
                                 <span class="price-span">Three locations or more</span>
                                 <span class="price-span">300 photos in color</span>
                                 <span class="price-span">50 photos in retouch</span>
                                 <span class="price-span">Readiness 1 week</span>
                                 <span class="price-span">Make up, visage, hairstyle</span>
                             </div>
-                            <button class="btn-gold">Order shooting</button>
+                            <button class="btn-gold price-btn">Order shooting</button>
                         </div>
                     </div>
                 </div>
             </section>
     
             <section class="section section-contacts" id="contacts">
-                <h2 class="section-title">Contacts</h2>
+                <div class="container">
+                    <div class="container-contacts">
+                        <h2 class="contacts-title">Contact me</h2>
+                        <!-- to do: fix fonts for title -->
+                        <form class="contacts-form">
+                            <input class="contacts-input" type="email" placeholder="E-mail">
+                            <input class="contacts-input" type="tel" placeholder="Phone">
+                            <textarea class="contacts-textarea" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                            <button class="btn-gold">Send message</button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
     <footer class="footer">
-        <div class="container"></div>
+        <div class="container container-footer">
+            <a href="https://github.com/cheshirelion" class="github-link footer-link">
+                <span>©    </span><span>2022</span><span>github</span></a>
+            <div class="rs-link">
+                <a href="https://rs.school/js/" class="footer-link">Rolling Scopes School</a>
+            </div>
+            <div class="social-btns">
+                <!-- ul.social-links>li.social-link>a.links>img -->
+            </div>
+        </div>
     </footer>
 <script src="index.js"></script>
 </body>
