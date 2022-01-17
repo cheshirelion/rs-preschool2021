@@ -41,6 +41,7 @@ body {
   cursor: pointer;
   font-size: 20px;
   line-height: 40px;
+  transition: 0.3s;
 }
 
 .btn-gold:hover,
@@ -64,6 +65,7 @@ body {
   box-sizing: border-box;
   font-size: 20px;
   line-height: 40px;
+  transition: 0.3s;
 }
 
 .btn-black:hover,
@@ -147,7 +149,7 @@ body {
   line-height: 0;
   color: var(--color-white);
   text-decoration: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav-link:hover, 
@@ -413,6 +415,8 @@ body {
   width: 130px;
   height: 130px;
   border: none;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .video-btn:hover {
@@ -562,6 +566,7 @@ body {
   line-height: 50px;
   color: var(--color-white);
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .footer-link:hover {
@@ -585,6 +590,7 @@ body {
 
 .social-li {
   list-style-type: none;
+  transition: 0.3s;
 }
 
 .social-li:nth-child(1) {
@@ -614,5 +620,4 @@ body {
   height: 32px;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: 0.3s; 
 }
