@@ -47,9 +47,7 @@ body {
 .btn-gold:hover,
 .btn-gold:focus,
 .btn-gold:active {
-  background-color: transparent;
-  color: var(--color-gold);
-  border: 2px solid var(--color-gold);
+  color: var(--color-white);
   box-sizing: border-box;
   border-radius: 0px;
 }
@@ -57,7 +55,7 @@ body {
 .btn-black {
   width: 220px;
   height: 55px;
-  background-color: transparent;
+  background-color: var(--color-black);
   color: var(--color-gold);
   border: 2px solid var(--color-gold);
   border-radius: 0px;
@@ -71,10 +69,7 @@ body {
 .btn-black:hover,
 .btn-black:focus,
 .btn-black:active {
-  box-sizing: border-box;
-  border: none;
-  background-color: var(--color-gold);
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 /* Header styles */
