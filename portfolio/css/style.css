@@ -15,22 +15,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.body-container {
-  font-family: Inter, sans-serif;
+body {
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   color: var(--color-white);
   background-color: var(--color-black);
-}
-
-@font-face {
-  font-family: Inter;
-  src: url("assets/fonts/Inter.ttf");
-}
-
-@font-face {
-  font-family: Merriweather;
-  src: url("assets/fonts/MerriweatherSans.ttf");
 }
 
 .container {
@@ -104,12 +94,11 @@ html {
 .h1 {
   height: 120px;
   margin: 0 0 10px 0;
-  font-family: Merriweather, serif;
-  font-size: 65px;
+  font-family: 'Merriweather', serif;
+  font-size: 60px;
   font-weight: 700;
   line-height: 120px;
   color: var(--color-white);
-  letter-spacing: 1px;
 }
 
 /* to do: .logo-container и .logo можно объеденить */
@@ -140,7 +129,6 @@ html {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  letter-spacing: 0.07em;
 }
 
 .nav-item {
@@ -153,7 +141,7 @@ html {
 }
 
 .nav-link {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 20px;
   line-height: 0;
@@ -217,14 +205,10 @@ html {
 .text-hero {
   margin: 0 0 27px 0;
   max-width: 470px;
-  /* height: 121px; */
-  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 40px;
-  letter-spacing: 0.03em;
-  /* border: 1px solid #000000; */
   text-shadow: 0px 4px 4px #000;
 }
 
@@ -254,13 +238,12 @@ html {
   max-width: 700px;
   margin: 0 auto;
   color: var(--color-gold);
-  font-family: Merriweather, serif;
+  font-family: 'Merriweather', serif;
   text-align: center;
   font-weight: 700;
   font-style: normal;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 80px;
-  letter-spacing: 1px;
 }
 
 .section-title::after,
@@ -315,12 +298,10 @@ html {
 
 .skills-items-title {
   margin-top: 100px;
-  font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
-  letter-spacing: 0.06em;
   text-align: center;
 
 
@@ -333,7 +314,6 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  letter-spacing: 0.02em;
   text-align: center;
 }
 
@@ -469,22 +449,21 @@ html {
 .price-title {
   margin-top: 20px;
   margin-bottom: 0;
-  font-family: Merriweather;
+  font-family: 'Merriweather', serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 56px;
   text-align: center;
   color: var(--color-white);
-  letter-spacing: 1px;
 }
 
 .price {
-  margin-top: 23px;
-  font-family: Merriweather;
+  margin-top: 20px;
+  font-family: 'Merriweather', serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 48px;
   text-align: center;
   color: var(--color-gold);
@@ -495,7 +474,7 @@ html {
 }
 
 .price-btn {
-  margin: 38px 113px 38px 113px;
+  margin: 41px 113px 41px 113px;
 }
 
 /* Price styles end */
@@ -518,12 +497,11 @@ html {
 
 .contacts-title {
   margin-top: 0px;
-  font-family: Merriweather;
+  font-family: 'Merriweather', serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 80px;
-  letter-spacing: 0.07em;
   color: var(--color-gold);
 }
 
@@ -577,10 +555,10 @@ html {
 
 .footer-link {
   display: block;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 50px;
   color: var(--color-white);
   text-decoration: none;
@@ -591,12 +569,11 @@ html {
 }
 
 .github-link {
-  word-spacing: 20px;
+  word-spacing: 4px;
 }
 
 .rs-link {
   margin-left: 58px;
-  letter-spacing: 0.01em;
 }
 
 .social-btns {
