@@ -41,14 +41,20 @@ body {
   cursor: pointer;
   font-size: 20px;
   line-height: 40px;
-  transition: 0.3s;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-.btn-gold:hover,
-.btn-gold:focus,
-.btn-gold:active {
+.btn-gold:hover {
   color: var(--color-white);
   box-sizing: border-box;
+}
+
+.btn-gold:focus,
+.btn-gold:active {
+  background-color: transparent;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
   border-radius: 0px;
 }
 
@@ -63,13 +69,18 @@ body {
   box-sizing: border-box;
   font-size: 20px;
   line-height: 40px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.btn-black:hover,
+.btn-black:hover {
+  color: var(--color-white);
+}
+
 .btn-black:focus,
 .btn-black:active {
-  color: var(--color-white);
+  border: none;
+  color: var(--color-black);
+  background-color: var(--color-gold);
 }
 
 /* Header styles */
