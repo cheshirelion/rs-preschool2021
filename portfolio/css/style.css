@@ -435,7 +435,10 @@ html {
   border: none;
 }
 
-/* to do: btn hover*/
+.video-btn:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
 
 /* Video styles end */
 
@@ -533,6 +536,7 @@ html {
   padding: 5px 20px;
   width: 450px;
   border: 2px solid var(--color-gold);
+  font-size: 20px;
   color: var(--color-gold);
   background: rgba(0, 0, 0, 0.5);
   background-color: transparent;
