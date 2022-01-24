@@ -222,7 +222,7 @@ body {
 /* Skills styles */
 
 .section-skills {
-  height: 482px;
+  max-height: 482px;
   padding-top: 80px;
 }
 
@@ -687,4 +687,25 @@ body {
     line-height: 40px;
   }
 
+  .section-skills {
+    max-height: 729px;
+    padding-top: 80px;
+  }
+
+  .container-skills {
+    margin-top: 43px;
+  }
+
+  .skills-items-title {
+    margin-top: 80px;
+  }
+  
+  .skills-item {
+    width: 305px;
+    height: 261px;
+  }
+
+  .items-text {
+    line-height: 22px;
+  }
 }
