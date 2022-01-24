@@ -632,6 +632,7 @@ body {
 /* Media styles*/
 
 @media (max-width: 768px) {
+  
   .nav {
       display: none;
   }
@@ -705,7 +706,7 @@ body {
     height: 261px;
   }
 
-  .items-text {
+  .skills-item .items-text {
     line-height: 22px;
   }
 
@@ -721,4 +722,50 @@ body {
   .portfolio-cards {
     justify-content: center;
   }
+
+  .section-video {
+    height: 628px;
+    padding-top: 84px;
+  }
+
+  .section-video .container {
+    padding: 0;
+  }
+
+  .video-player {
+    margin-top: 50px;
+    width: 768px;
+    height: 418px;
+    background-repeat: no-repeat;
+    background-position: -3px 0px;
+    background-size: 816px 418px;
+  }
+
+  .video-btn {
+    width: 65px;
+    height: 65px;
+    background-size: 65px 65px;
+  }
+
+  .section-price {
+    padding-top: 83px;
+    height: 1095px;
+  }
+
+  .price-cards {
+    justify-content: center;
+    margin-top: 51px;
+    gap: 50px;
+  }
+
+  .price-card {
+    padding-top: 20px;
+    width: 420px;
+    height: 505px;
+  }
+
+  .price-btn {
+    margin: 40px 99px 40px 99px;
+  }
+
 }
