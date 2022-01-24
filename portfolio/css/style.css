@@ -708,4 +708,17 @@ body {
   .items-text {
     line-height: 22px;
   }
+
+  .section-portfolio {
+    padding-top: 83px;
+    height: 3870px;
+  }
+
+  .portfolio-btns {
+    margin-top: 51px;
+  }
+
+  .portfolio-cards {
+    justify-content: center;
+  }
 }
