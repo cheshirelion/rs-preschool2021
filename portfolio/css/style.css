@@ -100,7 +100,7 @@ body {
 }
 
 .h1 {
-  height: 120px;
+  /* height: 120px; */
   margin: 0 0 10px 0;
   font-family: 'Merriweather', serif;
   font-size: 60px;
@@ -196,6 +196,7 @@ body {
   background-image: url('../assets/img/header-bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
+
 }
 
 .container-hero {
@@ -546,6 +547,9 @@ body {
 
 /* Contacts styles end*/
 
+
+/* Footer styles*/
+
 .footer {
   height: 150px;
 }
@@ -621,4 +625,66 @@ body {
   height: 32px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+/* Footer styles end*/
+
+/* Media styles*/
+
+@media (max-width: 768px) {
+  .nav {
+      display: none;
+  }
+
+  .section-hero {
+    height: 500px;
+    background-position: -5px -120px;
+    background-size: auto 620px;
+  }
+
+  .header {
+    background-position: -5px -30px;
+    background-size: auto 620px;
+  }
+
+  .container {
+    max-width: 768px;
+    padding: 0 60px;
+  }
+
+  .padding-top20px {
+    padding-top: 20px;
+  }
+
+  .container-hero {
+    margin-left: 0;
+    padding-top: 78px;
+  }
+
+  .h1 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+  }
+
+  .text-hero {
+    margin: 20px 0 60px 0;
+    max-width: 400px;
+    line-height: 24px;
+  }
+
+  .section-skills {
+    max-height: 729px;
+    padding-top: 80px;
+  }
+
+  .section-title {
+    height: 80px;
+    max-width: 364px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
 }
