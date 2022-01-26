@@ -1,11 +1,15 @@
+const close = document.querySelector('.hamburger');
+function toggleMenu() {
+   close.classList.toggle('closeBurger');
+};
+
+close.addEventListener('click', toggleMenu);
+
 (function () {
     const burger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav');
-    const closeBurger = document.querySelector('.header-burger-close');
+    
     burger.addEventListener('click', () => {
-        navMenu.classList.add('open')
-    });
-    closeBurger.addEventListener('click', () => {
-        navMenu.classList.remove('open')
-    });
+         navMenu.classList.toggle('open')
+     });
 }());
