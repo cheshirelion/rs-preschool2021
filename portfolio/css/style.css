@@ -94,8 +94,7 @@ body {
 .header-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: stretch;
   padding: 0 20px;
 }
 
@@ -126,17 +125,19 @@ body {
 .nav {
   position: relative;
   margin-left: auto;
-  height: 50px;
 }
 
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
+.nav-list,
 .switch-nav-list {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+
+.switch-nav-list {
+  margin-right: -7px;
 }
 
 .nav-item {
@@ -144,15 +145,15 @@ body {
   list-style-type: none;
 }
 
-.nav-item:last-child {
+/* .nav-item:last-child {
   margin-right: 0;
-}
+}  */
 
 .nav-link {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 20px;
-  line-height: 0;
+  line-height: 50px;
   color: var(--color-white);
   text-decoration: none;
   transition: 0.3s;
@@ -165,34 +166,6 @@ body {
   opacity: 0.75;
 }
 
-.nav-link {
-  font-size: 34.8235px;
-  line-height: 73px;
-}
-
-.switch-nav-link {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 0;
-  color: var(--color-white);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.switch-nav-link:hover, 
-.switch-nav-link:focus,
-.switch-nav-link:active {
-  color: var(--color-gold);
-  opacity: 0.75;
-}
-
-.switch-lng {
-  /* width: 70px; */
-  height: 50px;
-  margin: 0 20px 0 auto;
-}
-
 .switch-nav-item {
   margin-right: 8px;
   list-style-type: none;
@@ -203,8 +176,25 @@ body {
   line-height: 50px;
 }
 
-.switch-nav-item:last-child {
+/* .switch-nav-item:last-child {
   margin-right: 0;
+} */
+
+.switch-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.switch-nav-link:hover, 
+.switch-nav-link:focus,
+.switch-nav-link:active {
+  color: var(--color-gold);
+  opacity: 0.75;
 }
 
 .header-burger {
@@ -741,6 +731,11 @@ body {
     line-height: 73px;
   }
 
+  .switch-nav-list {
+    margin-left: auto;
+    margin-right: -7px;
+  }
+
   .container {
     margin: 0 auto;
     max-width: 768px;
@@ -763,6 +758,7 @@ body {
 
   .header-burger {
     display: block;
+    position: relative;
   }
 
   .header-burger-close {
