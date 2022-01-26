@@ -947,3 +947,9 @@ body {
     flex-direction: column;
   }
 }
+
+@media (max-width: 619px) {
+  .nav {
+    width: 100%;
+  }
+}
