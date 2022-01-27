@@ -89,6 +89,7 @@ body {
   background: url("../assets/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
+  transition: 00.3s;
 }
 
 .header-container {
@@ -96,6 +97,7 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0 20px;
+  overflow-x: hidden;
 }
 
 .h1 {
@@ -135,7 +137,6 @@ body {
   margin: 0;
 }
 
-
 .switch-nav-list {
   margin-right: -7px;
 }
@@ -144,10 +145,6 @@ body {
   margin-right: 30px;
   list-style-type: none;
 }
-
-/* .nav-item:last-child {
-  margin-right: 0;
-}  */
 
 .nav-link {
   font-family: 'Inter', sans-serif;
@@ -218,12 +215,11 @@ body {
   background-image: url('../assets/img/header-bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
-
+  transition: 00.3s;
 }
 
 .container-hero {
   margin-left: 80px;
-  /* width: 500px; */
   height: 330px;
   padding-top: 158px;
 }
@@ -338,7 +334,6 @@ body {
 }
 
 .items-text {
-  /* max-width: 280px; */
   margin-top: 20px;
   font-size: 18px;
   font-style: normal;
@@ -353,7 +348,6 @@ body {
 /* Portfolio styles */
 
 .section-portfolio {
-  /* height: 1500px; */
   padding: 80px 20px 0 20px;
   max-width: auto;
 }
@@ -378,40 +372,17 @@ body {
   background-repeat: no-repeat;
 }
 
-.portfolio-card1 {
-  background-image: url('../assets/img/portfolio-img1.jpg');
-  width: 450px;
-  height: 560px;
+.portfolio-card {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  transition: 0.3s;
 }
 
-.portfolio-card2 {
-  background-image: url('../assets/img/portfolio-img2.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card3 {
-  background-image: url('../assets/img/portfolio-img3.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card4 {
-  background-image: url('../assets/img/portfolio-img4.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card5 {
-  background-image: url('../assets/img/portfolio-img5.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card6 {
-  background-image: url('../assets/img/portfolio-img6.jpg');
-  width: 450px;
-  height: 560px;
+.portfolio-card:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Portfolio styles end */
@@ -431,9 +402,12 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  max-width: 1400px;
+  width: calc(100% -40px);
   height: 705px;
+  max-width: 1400px;
   background-image: url('../assets/img/video-bg.jpg');
+  background-size: auto 705px;
+  transition: 00.3s;
 }
 
 .video-btn {
@@ -461,7 +435,6 @@ body {
 /* Price styles */
 
 .section-price {
-  /* height: 845px; */
   padding: 80px 20px 0 20px;
   margin-bottom: 100px;
   max-width: auto;
@@ -478,7 +451,7 @@ body {
 
 .price-card {
   padding-top: 20px;
-  width: 450px;
+  max-width: 450px;
   height: 505px;
   border: 2px solid var(--color-gold);
 }
@@ -675,7 +648,6 @@ body {
 @media (max-width: 768px) {
   
   .nav {
-      /* display: none; */
       position: fixed;
       padding-top: 134px;
       padding-left: 127px;
@@ -685,13 +657,12 @@ body {
       right: 0;
       background-color: var(--color-black);
       z-index: 10;
-      transform: translateX(100%);
-      overflow-x: hidden;
-      transition: 0.5s;
+      right: -620px;
+      transition: 0.3s all linear;
   }
 
   .open {
-      transform: translateX(0);
+      right: 0;
   }
 
   .nav-list {
@@ -729,10 +700,13 @@ body {
   }
   
   .header {
-    background-position: -5px -30px;
-    background-size: auto 620px;
-    /* background-position: center;
-    background-size: cover; */
+    padding: 0;
+    width: 100%;
+    max-width: 768px;
+    height: 90px;
+    background-image: url('../assets/img/hero-bg-small.jpg');
+    background-size: 768px 590px;
+    background-position: -5px 0;
   }
 
   .header-container {
@@ -752,25 +726,39 @@ body {
     z-index: 15;
   }
 
-  .hamburger.closeBurger .burger-line1 {
+  .hamburger-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 2;
+    
+  }
+  .hamburger-overlay.active {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .hamburger.close .burger-line1 {
     transform: rotate(-45deg) translate(-11px, 6px);
   }
   
-  .hamburger.closeBurger .burger-line2 {
+  .hamburger.close .burger-line2 {
     opacity: 0;
   }
   
-  .hamburger.closeBurger .burger-line3 {
+  .hamburger.close .burger-line3 {
     transform: rotate(45deg) translate(-11px, -6px);
   }
 
   .section-hero {
     padding: 0;
+    width: 100%;
+    max-width: 768px;
     height: 500px;
-    background-position: -5px -120px;
-    background-size: auto 620px;
-    /* background-position: center;
-    background-size: cover; */
+    background-image: url('../assets/img/hero-bg-small.jpg');
+    background-position: -5px -90px;
+    background-size: 768px 590px;
   }
 
   .container-hero {
@@ -801,7 +789,6 @@ body {
 
   .section-skills {
     padding: 80px 60px 0 60px;
-    max-height: 729px;
   }
 
   .container-skills {
@@ -824,7 +811,6 @@ body {
 
   .section-portfolio {
     padding: 83px 60px 0 60px;
-    height: 3870px;
   }
 
   .portfolio-btns {
@@ -846,12 +832,13 @@ body {
 
   .video-player {
     margin-top: 50px;
+    width: 100%;
     max-width: 768px;
     height: 418px;
     background-image: url('../assets/img/video-bg-tablet.jpg');
     background-repeat: no-repeat;
     background-position: -3px 0px;
-    background-size: 816px 418px;
+    background-size: auto 418px;
   }
 
   .video-btn {
@@ -872,7 +859,7 @@ body {
 
   .price-card {
     padding-top: 20px;
-    width: 420px;
+    max-width: 420px;
     height: 505px;
   }
 
@@ -902,7 +889,7 @@ body {
   }
 
   .section-contacts .btn-gold {
-    margin-left: 115px;
+    margin-left: calc(50% - 111px);
   }
 
   .contacts-form {
@@ -946,10 +933,30 @@ body {
     justify-content: start;
     flex-direction: column;
   }
+
+  .skills-item {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 619px) {
   .nav {
     width: 100%;
+  }
+}
+
+@media (max-width: 419px) {
+  .price-card {
+    width: 100%;
+    padding: 40px 35px;
+  }
+
+  .price-btn {
+    margin: 40px 0;
+    width: 100%;
+  }
+
+  .margin-0 {
+    margin: 0;
   }
 }
