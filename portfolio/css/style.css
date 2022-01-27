@@ -374,40 +374,17 @@ body {
   background-repeat: no-repeat;
 }
 
-.portfolio-card1 {
-  background-image: url('../assets/img/portfolio-img1.jpg');
-  width: 450px;
-  height: 560px;
+.portfolio-card {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  transition: 0.3s;
 }
 
-.portfolio-card2 {
-  background-image: url('../assets/img/portfolio-img2.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card3 {
-  background-image: url('../assets/img/portfolio-img3.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card4 {
-  background-image: url('../assets/img/portfolio-img4.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card5 {
-  background-image: url('../assets/img/portfolio-img5.jpg');
-  width: 450px;
-  height: 560px;
-}
-
-.portfolio-card6 {
-  background-image: url('../assets/img/portfolio-img6.jpg');
-  width: 450px;
-  height: 560px;
+.portfolio-card:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Portfolio styles end */
@@ -746,6 +723,19 @@ body {
     cursor: pointer;
     user-select: none;
     z-index: 15;
+  }
+
+  .hamburger-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 2;
+    
+  }
+  .hamburger-overlay.active {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .hamburger.close .burger-line1 {
