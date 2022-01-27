@@ -89,6 +89,7 @@ body {
   background: url("../assets/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
+  transition: 00.3s;
 }
 
 .header-container {
@@ -214,12 +215,11 @@ body {
   background-image: url('../assets/img/header-bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
-
+  transition: 00.3s;
 }
 
 .container-hero {
   margin-left: 80px;
-  /* width: 500px; */
   height: 330px;
   padding-top: 158px;
 }
@@ -334,7 +334,6 @@ body {
 }
 
 .items-text {
-  /* max-width: 280px; */
   margin-top: 20px;
   font-size: 18px;
   font-style: normal;
@@ -349,7 +348,6 @@ body {
 /* Portfolio styles */
 
 .section-portfolio {
-  /* height: 1500px; */
   padding: 80px 20px 0 20px;
   max-width: auto;
 }
@@ -404,10 +402,12 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  max-width: 1400px;
+  width: calc(100% -40px);
   height: 705px;
+  max-width: 1400px;
   background-image: url('../assets/img/video-bg.jpg');
   background-size: auto 705px;
+  transition: 00.3s;
 }
 
 .video-btn {
@@ -435,7 +435,6 @@ body {
 /* Price styles */
 
 .section-price {
-  /* height: 845px; */
   padding: 80px 20px 0 20px;
   margin-bottom: 100px;
   max-width: auto;
@@ -701,11 +700,13 @@ body {
   }
   
   .header {
-    background-position: -5px -30px;
-    background-size: auto 620px;
-    /* background-size: auto 620px; */
-    /* background-position: center;
-    background-size: cover; */
+    padding: 0;
+    width: 100%;
+    max-width: 768px;
+    height: 90px;
+    background-image: url('../assets/img/hero-bg-small.jpg');
+    background-size: 768px 590px;
+    background-position: -5px 0;
   }
 
   .header-container {
@@ -752,9 +753,12 @@ body {
 
   .section-hero {
     padding: 0;
+    width: 100%;
+    max-width: 768px;
     height: 500px;
-    background-position: -5px -120px;
-    background-size: auto 620px;
+    background-image: url('../assets/img/hero-bg-small.jpg');
+    background-position: -5px -90px;
+    background-size: 768px 590px;
   }
 
   .container-hero {
@@ -785,7 +789,6 @@ body {
 
   .section-skills {
     padding: 80px 60px 0 60px;
-    max-height: 729px;
   }
 
   .container-skills {
@@ -808,7 +811,6 @@ body {
 
   .section-portfolio {
     padding: 83px 60px 0 60px;
-    height: 3870px;
   }
 
   .portfolio-btns {
@@ -830,6 +832,8 @@ body {
 
   .video-player {
     margin-top: 50px;
+    width: 100%;
+    max-width: 768px;
     height: 418px;
     background-image: url('../assets/img/video-bg-tablet.jpg');
     background-repeat: no-repeat;
