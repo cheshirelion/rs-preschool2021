@@ -754,15 +754,15 @@ body {
     z-index: 15;
   }
 
-  .hamburger.closeBurger .burger-line1 {
+  .hamburger.close .burger-line1 {
     transform: rotate(-45deg) translate(-11px, 6px);
   }
   
-  .hamburger.closeBurger .burger-line2 {
+  .hamburger.close .burger-line2 {
     opacity: 0;
   }
   
-  .hamburger.closeBurger .burger-line3 {
+  .hamburger.close .burger-line3 {
     transform: rotate(45deg) translate(-11px, -6px);
   }
 
