@@ -96,6 +96,7 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0 20px;
+  overflow-x: hidden;
 }
 
 .h1 {
@@ -135,7 +136,6 @@ body {
   margin: 0;
 }
 
-
 .switch-nav-list {
   margin-right: -7px;
 }
@@ -144,10 +144,6 @@ body {
   margin-right: 30px;
   list-style-type: none;
 }
-
-/* .nav-item:last-child {
-  margin-right: 0;
-}  */
 
 .nav-link {
   font-family: 'Inter', sans-serif;
@@ -676,7 +672,6 @@ body {
 @media (max-width: 768px) {
   
   .nav {
-      /* display: none; */
       position: fixed;
       padding-top: 134px;
       padding-left: 127px;
@@ -686,13 +681,12 @@ body {
       right: 0;
       background-color: var(--color-black);
       z-index: 10;
-      transform: translateX(100%);
-      overflow-x: hidden;
-      transition: 0.5s;
+      right: -620px;
+      transition: 0.3s all linear;
   }
 
   .open {
-      transform: translateX(0);
+      right: 0;
   }
 
   .nav-list {
