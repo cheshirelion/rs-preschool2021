@@ -479,7 +479,7 @@ body {
 
 .price-card {
   padding-top: 20px;
-  width: 450px;
+  max-width: 450px;
   height: 505px;
   border: 2px solid var(--color-gold);
 }
@@ -871,7 +871,7 @@ body {
 
   .price-card {
     padding-top: 20px;
-    width: 420px;
+    max-width: 420px;
     height: 505px;
   }
 
@@ -945,10 +945,30 @@ body {
     justify-content: start;
     flex-direction: column;
   }
+
+  .skills-item {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 619px) {
   .nav {
     width: 100%;
+  }
+}
+
+@media (max-width: 419px) {
+  .price-card {
+    width: 100%;
+    padding: 40px 35px;
+  }
+
+  .price-btn {
+    margin: 40px 0;
+    width: 100%;
+  }
+
+  .margin-0 {
+    margin: 0;
   }
 }
