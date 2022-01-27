@@ -732,6 +732,7 @@ body {
   .header {
     background-position: -5px -30px;
     background-size: auto 620px;
+    /* background-size: auto 620px; */
     /* background-position: center;
     background-size: cover; */
   }
@@ -770,8 +771,6 @@ body {
     height: 500px;
     background-position: -5px -120px;
     background-size: auto 620px;
-    /* background-position: center;
-    background-size: cover; */
   }
 
   .container-hero {
@@ -902,7 +901,7 @@ body {
   }
 
   .section-contacts .btn-gold {
-    margin-left: 115px;
+    margin-left: calc(50% - 111px);
   }
 
   .contacts-form {
