@@ -54,3 +54,17 @@ function preloadImages() {
 }
 
 preloadImages();
+
+//Active btn
+
+function changeActive(className, event) {
+    const btnAll = document.querySelector(className);
+    const btns = btnAll.querySelectorAll('button');
+
+    btns.forEach(int => int.classList.remove('active'));
+    event.target.classList.add('active');
+};
+
+portfolioBtns.addEventListener('click', event => {
+    changeActive('.portfolio-btns', event);
+});
