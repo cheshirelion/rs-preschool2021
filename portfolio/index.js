@@ -68,3 +68,5 @@ function changeActive(className, event) {
 portfolioBtns.addEventListener('click', event => {
     changeActive('.portfolio-btns', event);
 });
+
+alert('Пока добавил смену изображений в секции Portfolio. 03.02 постраюсь еще чего-нить добавить');
