@@ -1,3 +1,4 @@
+//Adaptive menu
 
 const burger = document.querySelector('.hamburger');
 const hamburgerOverlay = document.querySelector('.hamburger-overlay');
@@ -25,7 +26,7 @@ function closeMenu(event) {
 navMenu.addEventListener('click', closeMenu);
 hamburgerOverlay.addEventListener("click", closeMenu);
 
-//Change pic
+//Change Picture
 
 const portfolioBtns = document.querySelector('.portfolio-btns')
 const portfolioCards = document.querySelectorAll('.portfolio-card');
@@ -37,3 +38,19 @@ function changeImage(event) {
 };
 
 portfolioBtns.addEventListener('click', changeImage);
+
+//Preload Images
+
+const seasons = ['winter', 'spring', 'summer', 'autumn'];
+
+function preloadImages() {
+    seasons.forEach(season => {
+        for (let i = 1; i <= 6; i++) {
+        const img = new Image();
+        img.src = `./assets/img/${season}/${i}.jpg`
+        }
+    
+    });
+}
+
+preloadImages();
