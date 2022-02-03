@@ -23,6 +23,10 @@ body {
   background-color: var(--color-black);
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -60,7 +64,7 @@ body {
 .btn-black {
   width: 220px;
   height: 55px;
-  background-color: var(--color-black);
+  background-color: transparent;
   color: var(--color-gold);
   border: 2px solid var(--color-gold);
   border-radius: 0px;
@@ -71,6 +75,10 @@ body {
   transition: all 0.3s ease;
 }
 
+.btn-black-ligth {
+  color: var(--color-black);
+}
+
 .btn-black:hover {
   color: var(--color-white);
 }
@@ -79,6 +87,10 @@ body {
   border: none;
   color: var(--color-black);
   background-color: var(--color-gold);
+}
+
+.btn-black.btn-black-ligth.active {
+  color: var(--color-white);
 }
 
 /* Header styles */
@@ -126,6 +138,10 @@ body {
 .nav {
   position: relative;
   margin-left: auto;
+}
+
+.nav.light-theme {
+  background: none;
 }
 
 .nav-list,
@@ -190,6 +206,11 @@ body {
   background: url(../assets/svg/sun.svg) no-repeat;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.light-theme {
+  background: var(--color-white);
+  color: var(--color-black);
 }
 
 .switch-theme.light-theme {
@@ -446,8 +467,7 @@ body {
 /* Price styles */
 
 .section-price {
-  padding: 80px 20px 0 20px;
-  margin-bottom: 100px;
+  padding: 80px 20px 100px 20px;
   max-width: auto;
 }
 
@@ -666,14 +686,19 @@ body {
       height: 100%;
       top: 0;
       right: 0;
-      background-color: var(--color-black);
+      background: var(--color-black);
       z-index: 10;
       right: -620px;
       transition: 0.3s all linear;
   }
 
   .open {
-      right: 0;
+      right: 0; 
+  }
+
+  .open.light-theme {
+      background: var(--color-white);
+      color: var(--color-black);
   }
 
   .nav-list {
@@ -691,6 +716,7 @@ body {
   .nav-link {
     font-size: 34.8235px;
     line-height: 73px;
+    color: inherit;
   }
 
   .switch-nav-list {
@@ -756,14 +782,17 @@ body {
 
   .hamburger.close .burger-line1 {
     transform: rotate(-45deg) translate(-11px, 6px);
+    background-color:var(--color-gold);
   }
   
   .hamburger.close .burger-line2 {
     opacity: 0;
+    background-color:var(--color-gold);
   }
   
   .hamburger.close .burger-line3 {
     transform: rotate(45deg) translate(-11px, -6px);
+    background-color:var(--color-gold);
   }
 
   .section-hero {
@@ -864,7 +893,6 @@ body {
 
   .section-price {
     padding-top: 83px;
-    margin-bottom: 80px;
   }
  
   .price-cards {

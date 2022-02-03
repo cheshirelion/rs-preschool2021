@@ -160,8 +160,21 @@ getTranslate();
 //Change theme
 
 const themeBtn = document.querySelector('.switch-theme');
+const allBtnsBlack = document.querySelectorAll('.btn-black')
+const themeArr = [
+    '.nav',
+    '.section-skills',
+    '.section-portfolio',
+    '.section-video',
+    '.section-price',
+];
+
 themeBtn.addEventListener('click', () => {
     themeBtn.classList.toggle('light-theme');
+    themeArr.forEach(int => {
+        document.querySelector(int).classList.toggle('light-theme');
+    });
+    allBtnsBlack.forEach((int) => int.classList.toggle('btn-black-ligth'));
 });
 
 //Adaptive menu
@@ -169,9 +182,11 @@ themeBtn.addEventListener('click', () => {
 const burger = document.querySelector('.hamburger');
 const hamburgerOverlay = document.querySelector('.hamburger-overlay');
 const navMenu = document.querySelector('.nav');
+const body = document.querySelector('.body');
 
 burger.addEventListener('click', () => {
         navMenu.classList.toggle('open')
+        body.classList.toggle('overflow-hidden');
         hamburgerOverlay.classList.toggle('active');
     });
 
@@ -185,6 +200,7 @@ function closeMenu(event) {
     if (event.target.classList.contains('nav-link')) {
         navMenu.classList.remove('open');
         hamburgerOverlay.classList.remove('active');
+        body.classList.remove('overflow-hidden');
         burger.classList.remove('close');
     }
 };
@@ -207,6 +223,3 @@ function preloadImages() {
 }
 
 preloadImages();
-
-
-alert('Добавил смену изображений и языка. До вечера постраюсь сделать смену светлой темы');
