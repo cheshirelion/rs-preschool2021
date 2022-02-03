@@ -164,29 +164,21 @@ body {
 
 .switch-nav-item {
   margin-right: 8px;
+  background: none;
+  color: var(--color-white);
+  border: none;
   list-style-type: none;
   font-weight: bold;
   font-family: Inter;
   font-style: normal;
   font-size: 20px;
   line-height: 50px;
-}
-
-.switch-nav-link {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 50px;
-  color: var(--color-white);
-  text-decoration: none;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.switch-nav-link:hover, 
-.switch-nav-link:focus,
-.switch-nav-link:active {
+.switch-nav-item.active {
   color: var(--color-gold);
-  opacity: 0.75;
 }
 
 .hamburger {

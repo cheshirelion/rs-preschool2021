@@ -69,4 +69,10 @@ portfolioBtns.addEventListener('click', event => {
     changeActive('.portfolio-btns', event);
 });
 
+const switchBtns = document.querySelector('.switch-nav-list');
+
+switchBtns.addEventListener('click', event => {
+    changeActive('.switch-nav-list', event);
+});
+
 alert('Пока добавил смену изображений в секции Portfolio. 03.02 постраюсь еще чего-нить добавить');
