@@ -157,6 +157,13 @@ function getTranslate() {
 
 getTranslate();
 
+//Change theme
+
+const themeBtn = document.querySelector('.switch-theme');
+themeBtn.addEventListener('click', () => {
+    themeBtn.classList.toggle('light-theme');
+});
+
 //Adaptive menu
 
 const burger = document.querySelector('.hamburger');

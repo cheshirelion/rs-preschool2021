@@ -181,6 +181,26 @@ body {
   color: var(--color-gold);
 }
 
+.switch-theme {
+  width: 45px;
+  height: 45px;
+  margin: 5px 0 0 30px;
+  padding: 0;
+  border: 0;
+  background: url(../assets/svg/sun.svg) no-repeat;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switch-theme.light-theme {
+  background: url(../assets/svg/moon.svg) no-repeat;
+}
+
+.switch-theme:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
 .hamburger {
   display: none;
 }
@@ -702,6 +722,10 @@ body {
 
   .header-container {
     padding: 0 60px;
+  }
+
+  .switch-theme {
+    margin-right: 30px;
   }
 
   .hamburger {
