@@ -21,18 +21,20 @@
                 <a href ="https://rolling-scopes-school.github.io/cheshirelion-JSFEPRESCHOOL/portfolio/"><div class="logo"></div></a>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                        <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                        <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
-                        <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
-                        <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link" data-i18n="skills">Skills</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link" data-i18n="portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a href="#video" class="nav-link" data-i18n="video">Video</a></li>
+                        <li class="nav-item"><a href="#price" class="nav-link" data-i18n="price">Price</a></li>
+                        <li class="nav-item"><a href="#contacts" class="nav-link" data-i18n="contacts">Contacts</a></li>
                     </ul>
                 </nav>
-                <ul class="switch-nav-list">
-                    <li class="switch-nav-item"><a href="#en" class="switch-nav-link">en</a></li>
-                    <li class="switch-nav-item">/</li>
-                    <li class="switch-nav-item"><a href="#ru" class="switch-nav-link">ru</a></li>
-                </ul>
+            
+                <div class="switch-nav-list">
+                    <button class="switch-nav-item active" data-lang="en" type="button">en</button>
+                    <span class="switch-nav-item">/</span>
+                    <button class="switch-nav-item" data-lang="ru" type="button">ru</button>
+                </div>
+
                 <div class="hamburger">
                     <span class="burger-line burger-line1"></span>
                     <span class="burger-line burger-line2"></span>
@@ -44,47 +46,47 @@
         <div class="container">
             <section class="section-hero">
                     <div class="container-hero">
-                        <h1 class="h1">Alexa Rise</h1>
-                        <p class="text-hero">Save sincere emotions, romantic feelings and happy
+                        <h1 class="h1" data-i18n="hero-title">Alexa Rise</h1>
+                        <p class="text-hero" data-i18n="hero-text">Save sincere emotions, romantic feelings and happy
                             moments of life together with professional photographer Alexa Rise</p>
-                        <button class="btn-gold">Hire me</button>
+                        <button class="btn-gold" data-i18n="hire" type="button">Hire me</button>
                     </div>
             </section>
     
-            <section class="section-skills" id="skills">        
-                <h2 class="section-title">Skills</h2>
+            <section class="section-skills" id="skills">
+                <h2 class="section-title" data-i18n="skills">Skills</h2>
 
                 <div class="container-skills">
                     <div class="skills-item">
-                        <h3 class="skills-items-title">Digital photography</h3>
-                        <p class="items-text">High-quality photos in the studio<br> and on the nature</p>
+                        <h3 class="skills-items-title" data-i18n="skill-title-1">Digital photography</h3>
+                        <p class="items-text" data-i18n="skill-text-1">High-quality photos in the studio<br> and on the nature</p>
                     </div>
 
                     <div class="skills-item">
-                        <h3 class="skills-items-title">Video shooting</h3>
-                        <p class="items-text">Capture your moments so that<br> they always stay with you </p>
+                        <h3 class="skills-items-title" data-i18n="skill-title-2">Video shooting</h3>
+                        <p class="items-text" data-i18n="skill-text-2">Capture your moments so that<br> they always stay with you </p>
                     </div>
 
                     <div class="skills-item">
-                        <h3 class="skills-items-title">Retouch</h3>
-                        <p class="items-text">I strive to make photography<br> surpass reality</p>
+                        <h3 class="skills-items-title" data-i18n="skill-title-3">Retouch</h3>
+                        <p class="items-text" data-i18n="skill-text-3">I strive to make photography<br> surpass reality</p>
                     </div>
 
                     <div class="skills-item">
-                        <h3 class="skills-items-title">Audio</h3>
-                        <p class="items-text">Professional sounds recording<br> for video, advertising, portfolio</p>
+                        <h3 class="skills-items-title" data-i18n="skill-title-4">Audio</h3>
+                        <p class="items-text" data-i18n="skill-text-4">Professional sounds recording<br> for video, advertising, portfolio</p>
                     </div>
                 </div>
             </section>
     
             <section class="section-portfolio" id="portfolio">
-                <h2 class="section-title">Portfolio</h2>
+                <h2 class="section-title" data-i18n="portfolio">Portfolio</h2>
 
                 <div class="portfolio-btns">
-                    <button class="btn-black" data-season="winter">Winter</button>
-                    <button class="btn-black" data-season="spring">Spring</button>
-                    <button class="btn-black" data-season="summer">Summer</button>
-                    <button class="btn-black active" data-season="autumn">Autumn</button>
+                    <button class="btn-black" data-season="winter" data-i18n="winter" type="button">Winter</button>
+                    <button class="btn-black" data-season="spring" data-i18n="spring" type="button">Spring</button>
+                    <button class="btn-black" data-season="summer" data-i18n="summer" type="button">Summer</button>
+                    <button class="btn-black active" data-season="autumn" data-i18n="autumn" type="button">Autumn</button>
                 </div>
 
                 <div class="portfolio-cards">
@@ -98,66 +100,66 @@
             </section>
     
             <section class="section-video" id="video">
-                <h2 class="section-title">Video</h2>
+                <h2 class="section-title" data-i18n="video">Video</h2>
                 <div class="video-player">
-                    <button class="video-btn"></button>
+                    <button class="video-btn" type="button"></button>
                 </div>
             </section>
     
             <section class="section-price" id="price">
-                <h2 class="section-title">Price</h2>
+                <h2 class="section-title" data-i18n="price">Price</h2>
 
                 <div class="price-cards">
                     
                     <div class="price-card">
-                        <h3 class="price-title">Standard</h3>
+                        <h3 class="price-title" data-i18n="standart">Standard</h3>
                         <div class="price">500 $</div>
                         <div class="items-text">
-                            <span class="price-span">One location</span>
-                            <span class="price-span">120 photos in color</span>
-                            <span class="price-span">12 photos in retouch</span>
-                            <span class="price-span">Readiness 2-3 weeks</span>
-                            <span class="price-span">Make up, visage</span>
+                            <span class="price-span" data-i18n="price-description-1-span-1">One location</span>
+                            <span class="price-span" data-i18n="price-description-1-span-2">120 photos in color</span>
+                            <span class="price-span" data-i18n="price-description-1-span-3">12 photos in retouch</span>
+                            <span class="price-span" data-i18n="price-description-1-span-4">Readiness 2-3 weeks</span>
+                            <span class="price-span" data-i18n="price-description-1-span-5">Make up, visage</span>
                         </div>
-                        <button class="btn-gold price-btn">Order shooting</button>
+                        <button class="btn-gold price-btn" data-i18n="order" type="button">Order shooting</button>
                     </div>
 
                     <div class="price-card">
-                        <h3 class="price-title">Premium</h3>
+                        <h3 class="price-title" data-i18n="premium">Premium</h3>
                         <div class="price">700 $</div>
                         <div class="items-text">
-                            <span class="price-span">One or two locations</span>
-                            <span class="price-span">200 photos in color</span>
-                            <span class="price-span">20 photos in retouch</span>
-                            <span class="price-span">Readiness 1-2 weeks</span>
-                            <span class="price-span">Make up, visage</span>
+                            <span class="price-span" data-i18n="price-description-2-span-1">One or two locations</span>
+                            <span class="price-span" data-i18n="price-description-2-span-2">200 photos in color</span>
+                            <span class="price-span" data-i18n="price-description-2-span-3">20 photos in retouch</span>
+                            <span class="price-span" data-i18n="price-description-2-span-4">Readiness 1-2 weeks</span>
+                            <span class="price-span" data-i18n="price-description-2-span-5">Make up, visage</span>
                         </div>
-                        <button class="btn-gold price-btn">Order shooting</button>
+                        <button class="btn-gold price-btn" data-i18n="order">Order shooting</button>
                     </div>
 
                     <div class="price-card">
-                        <h3 class="price-title">Gold</h3>
+                        <h3 class="price-title" data-i18n="gold">Gold</h3>
                         <div class="price">1000 $</div>
                         <div class="items-text">
-                            <span class="price-span">Three locations or more</span>
-                            <span class="price-span">300 photos in color</span>
-                            <span class="price-span">50 photos in retouch</span>
-                            <span class="price-span">Readiness 1 week</span>
-                            <span class="price-span">Make up, visage, hairstyle</span>
+                            <span class="price-span" data-i18n="price-description-3-span-1">Three locations or more</span>
+                            <span class="price-span" data-i18n="price-description-3-span-2">300 photos in color</span>
+                            <span class="price-span" data-i18n="price-description-3-span-3">50 photos in retouch</span>
+                            <span class="price-span" data-i18n="price-description-3-span-4">Readiness 1 week</span>
+                            <span class="price-span" data-i18n="price-description-3-span-5">Make up, visage, hairstyle</span>
                         </div>
-                        <button class="btn-gold price-btn margin-0">Order shooting</button>
+                        <button class="btn-gold price-btn margin-0" data-i18n="order" type="button">Order shooting</button>
                     </div>
                 </div>
             </section>
     
             <section class="section-contacts" id="contacts">
                 <div class="container-contacts">
-                    <h2 class="contacts-title">Contact me</h2>
+                    <h2 class="contacts-title" data-i18n="contact-me">Contact me</h2>
                     <form class="contacts-form">
                         <input class="contacts-input" type="email" placeholder="E-mail">
-                        <input class="contacts-input" type="tel" placeholder="Phone">
-                        <textarea class="contacts-textarea" name="Message" id="mess" cols="30" rows="10" placeholder="Message"></textarea>
-                        <button class="btn-gold">Send message</button>
+                        <input class="contacts-input" type="tel" data-i18n="phone" placeholder="Phone">
+                        <textarea class="contacts-textarea" name="Message" id="mess" cols="30" rows="10" data-i18n="message" placeholder="Message"></textarea>
+                        <button class="btn-gold" data-i18n="send-message" type="button">Send message</button>
                     </form>
                 </div>
             </section>
