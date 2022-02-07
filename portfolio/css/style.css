@@ -517,7 +517,6 @@ body {
 }
 
 .progress {
-  background: linear-gradient(to right, #bdae82 0%, #bdae82 100%, #c8c8c8, #c8c8c8 100%);
   border: solid 1px #bdae82;
   height: 6px;
   width: calc(80% - 160px);
@@ -539,7 +538,7 @@ body {
   background: linear-gradient(to right, #bdae82 0%, #bdae82 100%, #c8c8c8, #c8c8c8 100%);
   border: solid 1px #bdae82;
   height: 6px;
-  width: calc(15%);
+  width: calc(20% - 140px);
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
@@ -568,6 +567,15 @@ body {
 .mute:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
   contrast(87%);
+}
+
+.time {
+  display: flex;
+  gap: 5px;
+  width: 10%;
+  color: var(--color-gold);
+  text-align: center;
+  font-size: 20px;
 }
 
 /* Video styles end */

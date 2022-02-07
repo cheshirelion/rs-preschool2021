@@ -131,15 +131,15 @@ switchBtns.addEventListener('click', event => {
     changeActive('.switch-nav-list', event);
 });
 
-function changeLanguage(l) {
+function changeLanguage(language) {
     const translateElement = document.querySelectorAll('[data-i18n]');
-    lang = l;
+    lang = language;
     translateElement.forEach(t => {
         if (t.placeholder) {
-            t.placeholder = i18Obj[l][t.dataset.i18n];
+            t.placeholder = i18Obj[language][t.dataset.i18n];
             t.textContent = '';
         } else {
-            t.textContent = i18Obj[l][t.dataset.i18n];
+            t.textContent = i18Obj[language][t.dataset.i18n];
         }
     });
 }
@@ -224,27 +224,53 @@ function preloadImages() {
 
 preloadImages();
 
-//Video player
-
-const progress = document.querySelector('.progress');
-const volume = document.querySelector('.volume')
-
-progress.addEventListener('input', changeProgressBar);
-volume.addEventListener('input', changeProgressBar);
-
-function changeProgressBar() {
-    const value = this.value;
-    this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
-};
-
-//play
+//--------------------------------Video player----------------------
 
 let isPlay = false;
 const video = document.querySelector('.player');
 const videoBtn = document.querySelector('.video-btn')
 const controls = document.querySelector('.controls');
 const videoPlayBtn = document.querySelector('.play');
-const volumeBtn = document.querySelector('.volume-pic')
+const volumeBtn = document.querySelector('.volume-pic');
+const progress = document.querySelector('.progress');
+const volume = document.querySelector('.volume');
+const curent = document.querySelector('.curent');
+const duration = document.querySelector('.duration');
+
+//Progress and timer
+
+function changeBackgroundProgressBar() {
+    let value = (progress.value * video.duration) / 100;
+    progress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
+};
+
+progress.addEventListener('timeupdate', changeBackgroundProgressBar);
+
+function curentTimer() {
+    progress.value = (video.currentTime / video.duration) * 100;
+
+    let minutes = Math.floor(video.currentTime / 60);
+    if (minutes < 10) {
+        minutes = `${minutes}`
+    };
+
+    let seconds = Math.floor(video.currentTime % 60);
+    if (seconds < 10) {
+        seconds = `0${seconds}`
+    };
+
+    curent.innerHTML = `${minutes}:${seconds}`;
+};
+
+video.addEventListener('timeupdate', curentTimer);
+
+function changeProgress() {
+    video.currentTime = (progress.value * video.duration) / 100;
+}
+
+progress.addEventListener('change', changeProgress);
+
+//Play & pause
 
 function playVideo() {
     video.curentTime = 0;
@@ -263,7 +289,6 @@ function addControlPanel() {
     video.classList.add('active-player')
 };
 
-
 function togglePlayBtn() {
     videoPlayBtn.classList.toggle('pause');
     videoBtn.classList.toggle('video-btn-none');
@@ -272,9 +297,20 @@ function togglePlayBtn() {
 
 videoBtn.addEventListener('click', addControlPanel);
 videoPlayBtn.addEventListener('click', togglePlayBtn);
+video.addEventListener('ended', togglePlayBtn);
+
+//Volume
 
 function toggleVolumeBtn() {
     volumeBtn.classList.toggle('mute');
 }
 
 volumeBtn.addEventListener('click', toggleVolumeBtn);
+
+function changeVolume() {
+    let value = this.value;
+    video.volume = value / 100;
+    this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
+};
+
+volume.addEventListener('input', changeVolume);
