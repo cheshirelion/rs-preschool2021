@@ -103,9 +103,24 @@
     
             <section class="section-video" id="video">
                 <h2 class="section-title" data-i18n="video">Video</h2>
+               <!---------------------------- Video player -------------------------------->
+
+               
                 <div class="video-player">
                     <button class="video-btn" type="button"></button>
+                    <div class="poster"></div>
+                    <video class="player" src="assets/video/video.mp4"></video>
+                    <div class="controls">
+                        <div class="player-pic play"></div>
+                        <input type="range" value="40" min="0" max="100" step="1" class="progress">
+                        <div class="player-pic volume-pic"></div>
+                        <input type="range" value="40" min="0" max="100" step="1" class="volume">
+                    </div>
                 </div>
+
+               <!---------------------------- End video player -------------------------------->
+
+
             </section>
     
             <section class="section-price" id="price">

@@ -223,3 +223,50 @@ function preloadImages() {
 }
 
 preloadImages();
+
+//Video player
+
+const progress = document.querySelector('.progress');
+const volume = document.querySelector('.volume')
+
+progress.addEventListener('input', changeProgressBar);
+volume.addEventListener('input', changeProgressBar);
+
+function changeProgressBar() {
+    const value = this.value;
+    this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
+};
+
+//play
+
+let isPlay = false;
+const video = document.querySelector('.player');
+const videoPlayBtn = document.querySelector('.play');
+const volumeBtn = document.querySelector('.volume-pic')
+const videoBtn = document.querySelector('.video-btn')
+
+function playVideo() {
+    video.curentTime = 0;
+    if(!isPlay) {
+        video.play();
+        isPlay = true;
+    } else {
+        video.pause();
+        isPlay = false;
+    }    
+};
+
+function togglePlayBtn() {
+    videoPlayBtn.classList.toggle('pause');
+    videoBtn.classList.toggle('video-btn-none');
+    playVideo();
+};
+
+videoPlayBtn.addEventListener('click', togglePlayBtn);
+videoBtn.addEventListener('click', togglePlayBtn)
+
+function toggleVolumeBtn() {
+    volumeBtn.classList.toggle('mute');
+}
+
+volumeBtn.addEventListener('click', toggleVolumeBtn);
