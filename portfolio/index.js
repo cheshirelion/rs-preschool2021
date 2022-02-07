@@ -241,9 +241,10 @@ function changeProgressBar() {
 
 let isPlay = false;
 const video = document.querySelector('.player');
+const videoBtn = document.querySelector('.video-btn')
+const controls = document.querySelector('.controls');
 const videoPlayBtn = document.querySelector('.play');
 const volumeBtn = document.querySelector('.volume-pic')
-const videoBtn = document.querySelector('.video-btn')
 
 function playVideo() {
     video.curentTime = 0;
@@ -256,14 +257,21 @@ function playVideo() {
     }    
 };
 
+function addControlPanel() {
+    togglePlayBtn();
+    controls.classList.add('active-controls');
+    video.classList.add('active-player')
+};
+
+
 function togglePlayBtn() {
     videoPlayBtn.classList.toggle('pause');
     videoBtn.classList.toggle('video-btn-none');
     playVideo();
 };
 
+videoBtn.addEventListener('click', addControlPanel);
 videoPlayBtn.addEventListener('click', togglePlayBtn);
-videoBtn.addEventListener('click', togglePlayBtn)
 
 function toggleVolumeBtn() {
     volumeBtn.classList.toggle('mute');
