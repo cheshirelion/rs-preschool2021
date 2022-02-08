@@ -224,7 +224,7 @@ function preloadImages() {
 
 preloadImages();
 
-//--------------------------------Video player----------------------
+//-----------------------Video player----------------------
 
 let isPlay = false;
 const video = document.querySelector('.player');
@@ -313,7 +313,6 @@ function toggleMouseMoveVolume(el) {
     } else if (video.volume > 0.1) {
         volumeBtn.classList.remove('mute');
         video.volume = el.target.value / 100;
-        console.log(video.volume)
     }
 }
 
