@@ -535,7 +535,7 @@ body {
 }
 
 .volume {
-  background: linear-gradient(to right, #bdae82 0%, #bdae82 100%, #c8c8c8, #c8c8c8 100%);
+  background: linear-gradient(to right, #bdae82 0%, #bdae82 50%, #c8c8c8 50%, #c8c8c8 100%);
   border: solid 1px #bdae82;
   height: 6px;
   width: calc(20% - 140px);
@@ -639,6 +639,7 @@ body {
 
 
 /* Contacts styles */
+
 .section-contacts {
   height: 700px;
   max-width: 1440px;
@@ -786,6 +787,7 @@ body {
 /* Footer styles end*/
 
 /* Media styles*/
+
 @media (max-width: 1320px) {
   .container-skills {
     justify-content: space-evenly;
