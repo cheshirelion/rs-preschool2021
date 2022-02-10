@@ -299,6 +299,7 @@ function togglePlayBtn() {
 };
 
 videoBtn.addEventListener('click', addControlPanel);
+video.addEventListener('click', addControlPanel);
 videoPlayBtn.addEventListener('click', togglePlayBtn);
 video.addEventListener('ended', togglePlayBtn);
 
