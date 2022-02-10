@@ -232,7 +232,7 @@ const videoBtn = document.querySelector('.video-btn')
 const controls = document.querySelector('.controls');
 const videoPlayBtn = document.querySelector('.play');
 const progress = document.querySelector('.progress');
-const curent = document.querySelector('.curent');
+const current = document.querySelector('.current');
 const duration = document.querySelector('.duration');
 
 //Progress and timer
@@ -242,7 +242,7 @@ function changeBackgroundProgress(event) {
     progress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
 };
 
-function curentTimer() {
+function currentTimer() {
     progress.value = (video.currentTime / video.duration) * 100;
 
     let minutes = Math.floor(video.currentTime / 60);
@@ -255,7 +255,7 @@ function curentTimer() {
         seconds = `0${seconds}`
     };
 
-    curent.innerHTML = `${minutes}:${seconds}`;
+    current.innerHTML = `${minutes}:${seconds}`;
 
     let durationMin = Math.floor(video.duration / 60);
     let durationSec = Math.floor(video.duration - durationMin * 60);
@@ -265,18 +265,17 @@ function curentTimer() {
     changeBackgroundProgress();
 };
 
-video.addEventListener('timeupdate', curentTimer);
+video.addEventListener('timeupdate', currentTimer);
 
 function changeProgress() {
     video.currentTime = (progress.value * video.duration) / 100;
 };
 
-progress.addEventListener('change', changeProgress);
+progress.addEventListener('click', changeProgress);
 
 //Play & pause
 
 function playVideo() {
-    video.curentTime = 0;
     if(!isPlay) {
         video.play();
         isPlay = true;
@@ -299,6 +298,7 @@ function togglePlayBtn() {
 };
 
 videoBtn.addEventListener('click', addControlPanel);
+video.addEventListener('click', addControlPanel);
 videoPlayBtn.addEventListener('click', togglePlayBtn);
 video.addEventListener('ended', togglePlayBtn);
 
@@ -308,21 +308,25 @@ const volume = document.querySelector('.volume');
 const volumeBtn = document.querySelector('.volume-pic');
 
 function toggleMouseMoveVolume(el) {
-    if (video.volume <= 0.1) {
+    if (video.volume <= 0) {
         volumeBtn.classList.add('mute');
-    } else if (video.volume > 0.1) {
+        currentVolume = video.volume;
+    } else if (video.volume > 0) {
         volumeBtn.classList.remove('mute');
         video.volume = el.target.value / 100;
     }
 }
 
+let currentVolume = video.volume;
+
 function toggleClickVolume() {
-    if (video.volume > 0.1 && volumeBtn.classList.contains('mute') === false) {
-        volumeBtn.classList.toggle('mute')
+    if (video.volume > 0 && volumeBtn.classList.contains('mute') === false) {
+        volumeBtn.classList.toggle('mute');
+        currentVolume = video.volume;
         video.volume = 0;
     } else {
         volumeBtn.classList.toggle('mute')
-        video.volume = 0.5;
+        video.volume = currentVolume;
     }
 };
 
