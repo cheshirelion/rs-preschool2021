@@ -232,7 +232,7 @@ const videoBtn = document.querySelector('.video-btn')
 const controls = document.querySelector('.controls');
 const videoPlayBtn = document.querySelector('.play');
 const progress = document.querySelector('.progress');
-const curent = document.querySelector('.curent');
+const current = document.querySelector('.current');
 const duration = document.querySelector('.duration');
 
 //Progress and timer
@@ -242,7 +242,7 @@ function changeBackgroundProgress(event) {
     progress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`
 };
 
-function curentTimer() {
+function currentTimer() {
     progress.value = (video.currentTime / video.duration) * 100;
 
     let minutes = Math.floor(video.currentTime / 60);
@@ -255,7 +255,7 @@ function curentTimer() {
         seconds = `0${seconds}`
     };
 
-    curent.innerHTML = `${minutes}:${seconds}`;
+    current.innerHTML = `${minutes}:${seconds}`;
 
     let durationMin = Math.floor(video.duration / 60);
     let durationSec = Math.floor(video.duration - durationMin * 60);
@@ -265,18 +265,17 @@ function curentTimer() {
     changeBackgroundProgress();
 };
 
-video.addEventListener('timeupdate', curentTimer);
+video.addEventListener('timeupdate', currentTimer);
 
 function changeProgress() {
     video.currentTime = (progress.value * video.duration) / 100;
 };
 
-progress.addEventListener('change', changeProgress);
+progress.addEventListener('click', changeProgress);
 
 //Play & pause
 
 function playVideo() {
-    video.curentTime = 0;
     if(!isPlay) {
         video.play();
         isPlay = true;
