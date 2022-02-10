@@ -311,6 +311,7 @@ const volumeBtn = document.querySelector('.volume-pic');
 function toggleMouseMoveVolume(el) {
     if (video.volume <= 0) {
         volumeBtn.classList.add('mute');
+        currentVolume = video.volume;
     } else if (video.volume > 0) {
         volumeBtn.classList.remove('mute');
         video.volume = el.target.value / 100;
