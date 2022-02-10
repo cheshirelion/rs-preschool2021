@@ -309,21 +309,24 @@ const volume = document.querySelector('.volume');
 const volumeBtn = document.querySelector('.volume-pic');
 
 function toggleMouseMoveVolume(el) {
-    if (video.volume <= 0.1) {
+    if (video.volume <= 0) {
         volumeBtn.classList.add('mute');
-    } else if (video.volume > 0.1) {
+    } else if (video.volume > 0) {
         volumeBtn.classList.remove('mute');
         video.volume = el.target.value / 100;
     }
 }
 
+let currentVolume = video.volume;
+
 function toggleClickVolume() {
-    if (video.volume > 0.1 && volumeBtn.classList.contains('mute') === false) {
-        volumeBtn.classList.toggle('mute')
+    if (video.volume > 0 && volumeBtn.classList.contains('mute') === false) {
+        volumeBtn.classList.toggle('mute');
+        currentVolume = video.volume;
         video.volume = 0;
     } else {
         volumeBtn.classList.toggle('mute')
-        video.volume = 0.5;
+        video.volume = currentVolume;
     }
 };
 
