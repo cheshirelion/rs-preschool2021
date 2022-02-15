@@ -42,7 +42,6 @@ body {
   align-items: center;
   margin: 0 20px;
   min-height: 700px;
-  /* border: 1px solid red; */
   background-image: url("../assets/img/stars.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
@@ -86,13 +85,14 @@ body {
   
 .container-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding: 43px 20px;
 }
 
 .footer-link {
   display: block;
+  margin: 0 20px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -103,22 +103,38 @@ body {
   transition: 0.3s;
 }
 
-.footer-link:hover {
-  color: #bdae82;
+.rs-icon {
+  width: 135px;
+  height: 40px;
+  margin-left: 20px;
+  padding: 2px;
+  border-radius: 60px/50px;
+  vertical-align: middle;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 00.3s;
 }
 
-.github-link {
-  word-spacing: 4px;
+.rs-icon:hover {
+  background-color: #bdae82;
 }
 
 .social-btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0;
   gap: 20px;
 }
 
-.social-li {
+.social-li:nth-child(1) {
+  list-style-type: none;
+  transition: 0.3s;
+  background: url('../assets/svg/github.svg');
+}
+
+.social-li:nth-child(2) {
   list-style-type: none;
   transition: 0.3s;
   background: url('../assets/svg/inst.svg');
