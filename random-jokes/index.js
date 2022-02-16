@@ -3,6 +3,7 @@ const rusQuotes = 'json/quotes.json';
 const btn = document.querySelector('.btn');
 const quote = document.querySelector('.text');
 const author = document.querySelector('.autor');
+const audio = new Audio('assets/audio/piu.mp3')
 
 async function getQuotes() {
     const quotes = rusQuotes;
@@ -18,6 +19,7 @@ const getRandomInt = (min, max) => {
 } 
 
 const showQuotes = (data) => {
+    audio.play();
     quote.textContent = data[getRandomInt(0, 100)].text;
     author.textContent = data[getRandomInt(0, 100)].author;
 }
