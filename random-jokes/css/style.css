@@ -26,10 +26,6 @@ body {
 
 /* Header styles */
 
-.header {
-
-}
-
 .header-title {
   margin: 20px 0;
   padding: 0;
@@ -86,8 +82,6 @@ body {
 
 .btn {
   position: relative;
-  /* top: calc(80% - 30px);
-  left: calc(50% - 113px); */
   margin-top: auto;
   margin-bottom: 60px;
   margin-left: calc(50% - 113px);
