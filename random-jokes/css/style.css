@@ -38,7 +38,7 @@ body {
   color: var(--color-white);
 }
 
-/* Qutes styles */
+/* Quotes styles */
 
 .quotes-container {
   display: flex;
@@ -70,8 +70,13 @@ body {
   font-size: 35px;
 }
 
+.text {
+  min-height: 115px;
+}
+
 .autor {
-  margin-bottom: 160px;
+  min-height: 40px;
+  margin-bottom: 100px;
   text-decoration: underline;
   text-decoration-color:var(--color-green);
 }
@@ -92,7 +97,6 @@ body {
 /* Footer styles */
 
 .footer {
-  height: 150px;
   color: var(--color-white);
   background-color: black;
 }
@@ -101,7 +105,7 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 43px 20px;
+  padding: 10px 20px;
 }
 
 .footer-link {
