@@ -19,10 +19,10 @@ const getRandomInt = (min, max) => {
 } 
 
 const showQuotes = (data) => {
-    audio.play();
     quote.textContent = data[getRandomInt(0, 100)].text;
     author.textContent = data[getRandomInt(0, 100)].author;
 }
 
 btn.addEventListener('click', getQuotes);
 document.addEventListener('DOMContentLoaded', getQuotes);
+btn.addEventListener('click', () => audio.play());
