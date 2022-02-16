@@ -9,7 +9,6 @@ async function getQuotes() {
     const quotes = rusQuotes;
     const res = await fetch(quotes);
     const data = await res.json();
-    console.log(data);
     showQuotes(data);
 }
 
