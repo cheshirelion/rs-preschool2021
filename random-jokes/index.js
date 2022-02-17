@@ -3,10 +3,18 @@ const rusQuotes = 'json/quotes.json';
 const btn = document.querySelector('.btn');
 const quote = document.querySelector('.text');
 const author = document.querySelector('.autor');
-const audio = new Audio('assets/audio/laser.mp3')
+const audio = new Audio('assets/audio/laser.mp3');
+const lang = document.querySelectorAll('.lang');
+let quotes = rusQuotes;
+
+function changeActive() {
+    lang.forEach(curent => curent.classList.remove('active'));
+    this.classList.add('active');
+};
+
+lang.forEach(el => {el.addEventListener('click', changeActive)});
 
 async function getQuotes() {
-    const quotes = rusQuotes;
     const res = await fetch(quotes);
     const data = await res.json();
     showQuotes(data);
