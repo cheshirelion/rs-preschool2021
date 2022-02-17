@@ -26,7 +26,6 @@ async function getQuotes() {
     const res = await fetch(quotes);
     const data = await res.json();
     showQuotes(data);
-    console.log(data)
 }
 
 const getRandomInt = (min, max) => {
