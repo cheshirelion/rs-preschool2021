@@ -38,12 +38,13 @@ const checkWinner = () => {
             winner ='нолики'
             console.log(winner);
             winO++;
-        }
-        //  else if (squares[winComb[i][0]].innerHTML !== ('X' || 'O') && squares[winComb[i][1]].innerHTML !== ('X' || 'O') && squares[winComb[i][2]].innerHTML !== ('X' || 'O')) {
-        //     winner = 'ничья';
-        //     console.log(winner);
-        //     draw++;
-        // }
+        }  
+    }
+
+    if(stepCount === 9 && winner !== 'крестики' && winner !== 'нолики') {
+        winner = 'ничья';
+        draw++;
+        console.log(winner);
     }
 };
 
