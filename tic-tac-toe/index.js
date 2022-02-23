@@ -22,7 +22,11 @@ let gameCount = winX + winO + draw;
 
 arena.addEventListener('click', event => {
     if(event.target.className = 'square') {
-        stepCount % 2 === 0 ? event.target.innerHTML = 'X' : event.target.innerHTML = 'O';
+        if(stepCount % 2 === 0 && event.target.innerHTML !== 'X' && event.target.innerHTML !== 'O') {
+            event.target.innerHTML = 'X';
+        } else if (stepCount % 2 !== 0 && event.target.innerHTML !== 'X' && event.target.innerHTML !== 'O') {
+            event.target.innerHTML = 'O';
+        }
         stepCount++;
         checkWinner();
     }
@@ -48,4 +52,3 @@ const checkWinner = () => {
     }
 };
 
-alert('Привет! В данный момент опубликована сырая версия игры. Работа еще ведется ^_^ Прошу пока не проверять, либо оставить контакт для связи. Извиняюсь за  возможные неудобства. Заранее благодарю, долгой жизни и процветания 🖖!');
