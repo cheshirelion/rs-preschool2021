@@ -16,9 +16,9 @@ body {
 }
 
 .title {
-    margin: 15px auto;
+    margin: 10px auto;
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     font-style: normal;
 }
@@ -51,6 +51,85 @@ body {
     font-size: 110px;
     cursor: pointer;
 }
+
+.modal-window-wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.active {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+}
+
+.modal-window-content {
+    text-align: center;
+}
+
+.modal-window-title {
+    margin: 20px 5px 10px 5px;
+    text-align: center;
+}
+
+.winner {
+    margin-bottom: 10px;
+    text-align: center;
+    color: red;
+}
+
+.step-count {
+    text-align: center;
+}
+
+.game-count,
+.win-x,
+.win-o,
+.draw {
+    text-align: center;
+}
+
+.btn-restart {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-restart:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid  white;
+}
+
+/* Footer styles */
 
 .footer {
     display: flex;

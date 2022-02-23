@@ -1,5 +1,15 @@
 const arena = document.getElementById('arena');
 const squares = document.querySelectorAll('.square');
+const overlay = document.querySelector('.overlay');
+const modalWindowWrapper = document.querySelector('.modal-window-wrapper');
+const modalWindowContent = document.querySelector('.modal-window-content');
+const elementWinner = document.querySelector('.winner');
+const elementSteps = document.querySelector('.step-count');
+const elementGameCount = document.querySelector('.game-count');
+const elementWinX = document.querySelector('.win-x');
+const elementWinO = document.querySelector('.win-o');
+const elementDraw = document.querySelector('.draw');
+const btnRestart = document.querySelector('.btn-restart')
 const winComb = [
     [0, 1, 2],
     [3, 4, 5],
@@ -17,17 +27,21 @@ let winner = '';
 let winX = 0;
 let winO = 0;
 let draw = 0;
-let gameCount = winX + winO + draw;
+
+const gameCount = (winX, winO, draw) => {
+    return winX + winO + draw;
+}
 
 
 arena.addEventListener('click', event => {
     if(event.target.className = 'square') {
         if(stepCount % 2 === 0 && event.target.innerHTML !== 'X' && event.target.innerHTML !== 'O') {
             event.target.innerHTML = 'X';
+            stepCount++;
         } else if (stepCount % 2 !== 0 && event.target.innerHTML !== 'X' && event.target.innerHTML !== 'O') {
             event.target.innerHTML = 'O';
+            stepCount++;
         }
-        stepCount++;
         checkWinner();
     }
 });
@@ -35,20 +49,34 @@ arena.addEventListener('click', event => {
 const checkWinner = () => {
     for(let i = 0; i < winComb.length; i++) {
         if(squares[winComb[i][0]].innerHTML === 'X' && squares[winComb[i][1]].innerHTML === 'X' && squares[winComb[i][2]].innerHTML === 'X') {
-            winner = 'крестики';
-            console.log(winner);
+            winner = 'Победили крестики!';
             winX++;
+            showModal(winner);
         } else if (squares[winComb[i][0]].innerHTML === 'O' && squares[winComb[i][1]].innerHTML === 'O' && squares[winComb[i][2]].innerHTML === 'O') {
-            winner ='нолики'
-            console.log(winner);
+            winner ='Победили нолики!'
             winO++;
+            showModal(winner);
         }  
     }
 
     if(stepCount === 9 && winner !== 'крестики' && winner !== 'нолики') {
-        winner = 'ничья';
+        winner = 'Ничья!';
         draw++;
-        console.log(winner);
+        showModal(winner);
     }
 };
 
+const showModal = (result) => {
+    modalWindowWrapper.classList.add('active');
+    elementWinner.innerHTML = winner;
+    elementSteps.innerHTML = `Количество шагов: ${stepCount}`;
+    elementGameCount.innerHTML = `Сыгранных игр: ${gameCount(winX, winO, draw)}`;
+    elementWinX.innerHTML = `Крестики: ${winX}`;
+    elementWinO.innerHTML = `Нолики: ${winO}`;
+    elementDraw.innerHTML = `Ничья: ${draw}`;
+};
+
+btnRestart.addEventListener('click', event => {
+    modalWindowWrapper.classList.remove('active');
+    location.reload();
+});
