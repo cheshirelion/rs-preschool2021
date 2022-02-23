@@ -22,6 +22,8 @@ const winComb = [
 ];
 const crossAudio = new Audio('assets/audio/cross.mp3');
 const zeroAudio = new Audio('assets/audio/zero.mp3');
+const winAudio = new Audio('assets/audio/win.mp3');
+const drawAudio = new Audio('assets/audio/draw.mp3');
 crossAudio.playbackRate = 2.0;
 zeroAudio.playbackRate = 2.0;
 
@@ -55,10 +57,12 @@ arena.addEventListener('click', event => {
 const checkWinner = () => {
     for(let i = 0; i < winComb.length; i++) {
         if(squares[winComb[i][0]].innerHTML === 'X' && squares[winComb[i][1]].innerHTML === 'X' && squares[winComb[i][2]].innerHTML === 'X') {
+            winAudio.play();
             winner = 'Победили крестики!';
             winX++;
             showModal(winner);
         } else if (squares[winComb[i][0]].innerHTML === 'O' && squares[winComb[i][1]].innerHTML === 'O' && squares[winComb[i][2]].innerHTML === 'O') {
+            winAudio.play();
             winner ='Победили нолики!'
             winO++;
             showModal(winner);
@@ -66,6 +70,7 @@ const checkWinner = () => {
     }
 
     if(stepCount === 9 && winner !== 'крестики' && winner !== 'нолики') {
+        drawAudio.play();
         winner = 'Ничья!';
         draw++;
         showModal(winner);
