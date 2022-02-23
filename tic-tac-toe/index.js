@@ -58,20 +58,20 @@ const checkWinner = () => {
     for(let i = 0; i < winComb.length; i++) {
         if(squares[winComb[i][0]].innerHTML === 'X' && squares[winComb[i][1]].innerHTML === 'X' && squares[winComb[i][2]].innerHTML === 'X') {
             winAudio.play();
-            winner = 'Победили крестики!';
+            winner = 'Crosses win!';
             winX++;
             showModal(winner);
         } else if (squares[winComb[i][0]].innerHTML === 'O' && squares[winComb[i][1]].innerHTML === 'O' && squares[winComb[i][2]].innerHTML === 'O') {
             winAudio.play();
-            winner ='Победили нолики!'
+            winner ='Zeros won!'
             winO++;
             showModal(winner);
         }  
     }
 
-    if(stepCount === 9 && winner !== 'Победили крестики!' && winner !== 'Победили нолики!') {
+    if(stepCount === 9 && winner !== 'Crosses win!' && winner !== 'Zeros won!') {
         drawAudio.play();
-        winner = 'Ничья!';
+        winner = 'Draw!';
         draw++;
         showModal(winner);
     }
@@ -80,11 +80,11 @@ const checkWinner = () => {
 const showModal = (result) => {
     modalWindowWrapper.classList.add('active');
     elementWinner.innerHTML = winner;
-    elementSteps.innerHTML = `Количество шагов: ${stepCount}`;
-    elementGameCount.innerHTML = `Сыгранных игр: ${gameCount(winX, winO, draw)}`;
-    elementWinX.innerHTML = `Крестики: ${winX}`;
-    elementWinO.innerHTML = `Нолики: ${winO}`;
-    elementDraw.innerHTML = `Ничья: ${draw}`;
+    elementSteps.innerHTML = `Steps: ${stepCount}`;
+    elementGameCount.innerHTML = `All games: ${gameCount(winX, winO, draw)}`;
+    elementWinX.innerHTML = `Crosses: ${winX}`;
+    elementWinO.innerHTML = `Zeros: ${winO}`;
+    elementDraw.innerHTML = `Draw: ${draw}`;
 };
 
 btnRestart.addEventListener('click', event => {
@@ -92,4 +92,4 @@ btnRestart.addEventListener('click', event => {
     location.reload();
 });
 
-alert('Привет! В данный момент опубликована сырая версия игры. Работа еще ведется ^_^ Прошу пока не проверять, либо оставить контакт для связи. Извиняюсь за  возможные неудобства. Заранее благодарю, долгой жизни и процветания 🖖!');
+alert('Собираюсь ещё добавить local storage ^_^')
