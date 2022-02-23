@@ -8,6 +8,7 @@
 body {
     background-color: black;
     color: white;
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
 }
 
 .header {
@@ -16,11 +17,9 @@ body {
 }
 
 .title {
-    margin: 15px auto;
+    margin: 10px auto;
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    font-style: normal;
+    font-size: 30px;
 }
 
 .wrapper {
@@ -47,10 +46,107 @@ body {
     align-items: center;
     width: 150px;
     height: 150px;
-    border: 2px solid white;
-    font-size: 110px;
+    font-size: 150px;
     cursor: pointer;
 }
+
+.square:nth-child(2),
+.square:nth-child(8) {
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+}
+
+.square:nth-child(4),
+.square:nth-child(6) {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.square:nth-child(5) {
+    border: 4px solid white;
+}
+
+.modal-window-wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.active {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+}
+
+.modal-window-content {
+    text-align: center;
+}
+
+.modal-window-title {
+    margin: 20px 5px 10px 5px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.winner {
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 0 10px red,0 0 20px red,0 0 30px red,0 0 40px red;
+    font-size: 18px;
+    text-align: center;
+}
+
+.step-count {
+    text-align: center;
+}
+
+.game-count,
+.win-x,
+.win-o,
+.draw {
+    text-align: center;
+}
+
+.btn-restart {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-restart:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid  white;
+}
+
+/* Footer styles */
 
 .footer {
     display: flex;

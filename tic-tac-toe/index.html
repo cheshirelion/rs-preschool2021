@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tic-tac-toe by Cheshirelion</title>
     <link rel="icon" href="assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -27,6 +28,22 @@
             <div class="square"></div>
         </section>
     </main>
+    <div class="modal-window-wrapper">
+        <div class="overlay"></div>
+        <div class="modal-window">
+            <div class="modal-window-content">
+                <h2 class="modal-window-title">Игра закончена!</h2>
+                <div class="winner"></div>
+                <div class="step-count"></div>
+                <h2 class="modal-window-title">Общий счёт:</h2>
+                <div class="game-count"></div>
+                <div class="win-x"></div>
+                <div class="win-o"></div>
+                <div class="draw"></div>
+            </div>
+            <button class="btn-restart">Начать следующую игру</button>
+        </div>
+    </div>
 
     <footer class="footer">
         <a href="https://rs.school/js-stage0/" class="rs-link">
