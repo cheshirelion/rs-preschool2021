@@ -69,7 +69,7 @@ const checkWinner = () => {
         }  
     }
 
-    if(stepCount === 9 && winner !== 'крестики' && winner !== 'нолики') {
+    if(stepCount === 9 && winner !== 'Победили крестики!' && winner !== 'Победили нолики!') {
         drawAudio.play();
         winner = 'Ничья!';
         draw++;
