@@ -20,6 +20,10 @@ const winComb = [
     [0, 4, 8],
     [6, 4, 2],
 ];
+const crossAudio = new Audio('assets/audio/cross.mp3');
+const zeroAudio = new Audio('assets/audio/zero.mp3');
+crossAudio.playbackRate = 2.0;
+zeroAudio.playbackRate = 2.0;
 
 // let player = 'X';
 let stepCount = 0;
@@ -37,9 +41,11 @@ arena.addEventListener('click', event => {
     if(event.target.className = 'square') {
         if(stepCount % 2 === 0 && event.target.innerHTML !== 'X' && event.target.innerHTML !== 'O') {
             event.target.innerHTML = 'X';
+            crossAudio.play();
             stepCount++;
         } else if (stepCount % 2 !== 0 && event.target.innerHTML !== 'X' && event.target.innerHTML !== 'O') {
             event.target.innerHTML = 'O';
+            zeroAudio.play();
             stepCount++;
         }
         checkWinner();
