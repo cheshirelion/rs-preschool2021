@@ -36,11 +36,11 @@ body {
 #arena {
     display: flex;
     flex-wrap: wrap;
-    width: 450px;
-    height: 450px;
+    max-width: 450px;
+    max-height: 450px;
     background-color: black;
     color: white;
-
+    transition: 0.3s;
 }
 
 .square {
@@ -51,6 +51,7 @@ body {
     height: 150px;
     font-size: 150px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .square:nth-child(2),
@@ -162,22 +163,30 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 10px;
     max-width: 550px;
-    margin: 10px auto 0 auto;
+    margin: 0 auto 0 auto;
     font-size: 20px;
     font-weight: normal;
     font-style: normal;
 }
 
 .rs-icon {
-    width: 111px;
-    height: 40px;
+    width: 85px;
+    height: 32px;
     padding: 2px;
+    margin-right: 10px;
     border-radius: 3px/3px;
     background-color: white;
     vertical-align: middle;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.cheshirelion {
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 .social-btns {
@@ -206,4 +215,51 @@ body {
     height: 32px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 489px) {
+    #arena {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .square {
+        width: 100px;
+        height: 100px;
+        font-size: 100px;
+    }
+
+    .cheshirelion {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 337px) {
+    #arena {
+        max-width: 210px;
+        max-height: 210px;
+    }
+    
+    .square {
+        width: 70px;
+        height: 70px;
+        font-size: 70px;
+    }
+
+    .modal-window {
+        width: 210px;
+        height: 300px;
+    }
+    
+    .modal-window-title {
+        margin: 20px 5px 10px 5px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .btn-restart,
+    .btn-next-game {
+        height: 40px;
+        font-size: 14px;
+    }
 }
