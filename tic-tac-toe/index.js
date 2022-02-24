@@ -9,7 +9,8 @@ const elementGameCount = document.querySelector('.game-count');
 const elementWinX = document.querySelector('.win-x');
 const elementWinO = document.querySelector('.win-o');
 const elementDraw = document.querySelector('.draw');
-const btnRestart = document.querySelector('.btn-restart')
+const btnNextGame = document.querySelector('.btn-next-game');
+const btnRestart = document.querySelector('.btn-restart');
 const winComb = [
     [0, 1, 2],
     [3, 4, 5],
@@ -26,8 +27,6 @@ const winAudio = new Audio('assets/audio/win.mp3');
 const drawAudio = new Audio('assets/audio/draw.mp3');
 crossAudio.playbackRate = 2.0;
 zeroAudio.playbackRate = 2.0;
-
-// let player = 'X';
 let stepCount = 0;
 let winner = '';
 let winX = 0;
@@ -77,7 +76,7 @@ const checkWinner = () => {
     }
 };
 
-const showModal = (result) => {
+const showModal = () => {
     modalWindowWrapper.classList.add('active');
     elementWinner.innerHTML = winner;
     elementSteps.innerHTML = `Steps: ${stepCount}`;
@@ -87,9 +86,38 @@ const showModal = (result) => {
     elementDraw.innerHTML = `Draw: ${draw}`;
 };
 
-btnRestart.addEventListener('click', event => {
+const closeModal = () => {
     modalWindowWrapper.classList.remove('active');
+    location.reload();
+};
+
+btnNextGame.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal)
+
+btnRestart.addEventListener('click', () => {
+    winX = 0;
+    winO = 0;
+    draw = 0;
     location.reload();
 });
 
-alert('Собираюсь ещё добавить local storage ^_^')
+const setLocalStorage = () => {
+    if(gameCount(winX, winO, draw) >= 10) {
+        winX = 0;
+        winO = 0;
+        draw = 0;
+    }
+    localStorage.setItem('winX', winX);
+    localStorage.setItem('winO', winO);
+    localStorage.setItem('draw', draw);
+};
+
+window.addEventListener('beforeunload', setLocalStorage);
+
+const getLocalStorage = () => {
+    winX = Number(localStorage.getItem('winX'));
+    winO = Number(localStorage.getItem('winO'));
+    draw = Number(localStorage.getItem('draw'));
+};
+
+window.addEventListener('load', getLocalStorage);
